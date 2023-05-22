@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  frontend:
+    container_name: unity-webgl-frontend
+    image: unity-webgl-frontend
+    build: ./frontend
+    ports:
+      - "80:80"
+  backend:
+    container_name: fastapi-backend
+    image: fastapi-backend
+    build: ./backend
+    ports:
+      - "8000:8000"
